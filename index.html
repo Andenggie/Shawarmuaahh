@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet"href="style.css">
+
+<style>
+*{
+box-sizing: border-box;
+}
+    body {
+           font-family: Arial, sans-serif;
+           margin: 20px;
+           padding: 20px;
+           background-color: lightyellow;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           min-height: 100vh;
+           margin: 0;
+}
+ 
+    h1 {
+      color: #333;
+}
+
+    input[type="text"], input[type="location"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+}
+
+     input[type="text"], input[type="order"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+}
+
+      input[type="text"], input[type="contact"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+}
+
+ input[type="text"], input[type="message"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+}
+
+
+      input[type="submit"] {
+      background-color: #4CAF50;
+      borders: 2px solid black;
+      border-radius: 4px;
+      color: white;
+      display: block;
+      font-family: inherit;
+      font-size: 16px;
+      padding: 5px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+}
+
+.container {
+        padding: 30px 40px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+</div>
+
+<h1 style="text-align:center;background-color:lightyellow;border: 2px solid black;">Order now to Shawarmuaahh!</h1>
+<form id="contactForm">
+<label for="name">Name:</label>
+<input type="text" placeholder="Juan Dela Cruz" id="name" required>
+<br>
+<label for="location">Location:</label>
+<input type="location" placeholder="Location" id="location" required>
+<br>
+<label for="order">Order type:</label>
+<input type="order" placeholder="Tuna, Chicken, Beef, Vegie, Rice" id="order" required>
+<br>
+<label for="contact">Contact Number:</label>
+<input type="contact" placeholder="09526398256" id="contact" required>
+<br>
+<label for="message">Please input your message if you have suggestions in your order:</label>
+<input type="message" placeholder="Suggestions" id="message" required>
+<br>
+<input type="submit" value="Submit">
+</form>
+<div id="message"></div>
+<script src="script.js"></script>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {event.preventDefault(); // Prevent default form submission
+const name = document.getElementById("name").value;
+const company = document.getElementById("location").value;
+const position = document.getElementById("order type").value;
+const email = document.getElementById("contact").value;
+const email = document.getElementById("message").value;
+
+
+if (name && email) {
+document.getElementById("message").innerText = "We appreciate your submitted form. We will send you an update once we reviewed your inquiry. Thank you!"
+this.reset(); // Reset the form fields
+} else {
+document.getElementById("message").innerText = "Please fill in all fields.";
+}
+});
+</script>
+
+</body>
+</html>
+
+
+
+
